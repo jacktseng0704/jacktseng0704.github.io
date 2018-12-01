@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>響亮亮的配音員</title>
+    <!-- <link rel="icon shortcut" href="./img/favicon.ico"> -->
+    <!-- 連結Bootstrap.css -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
+
+    <!-- 客製化Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- 使用font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <!-- 使用style.css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 連結Bootstrap所需要的js -->
+    <!-- 更新為完整的jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- 不完整版的jquery <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- TODO: 使用 Wow.js 製作滾動動畫 -->
+    <!-- 引用Google Map JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <!-- 連結hello.js -->
+    <!-- <script src="./js/hello.js"></script> -->
+    <script src="./js/map-styles.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <!-- 使用Boostrap Navbar -->
+    <!-- 設定Navbar緊貼畫面上緣 fixed-top -->
+    <!-- TODO: 點擊滾動目標 -->
+    <!-- b4-navbar-default -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-secondary">
+        <!-- 左上角的品牌名稱 -->
+        <a class="navbar-brand" href="#">響亮亮配音</a>
+        <!-- 行動裝置的導覽按鈕 -->
+        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- 按鈕上的三條橫線 -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- 導覽列裡所有的連結 -->
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#introSection">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#featuresSection">Voice</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviewsSection">Payment</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- header -->
+    <!-- 為以下文字加上Bootstrap Jumbotron -->
+    <!-- 為Jumbotron加入背景圖被設定文字為白色 -->
+    <header id="header" class="jumbotron text-center">
+        <div class="container">
+            <h1 class="display-4">優質好聲音</h1>
+            <p>提供專業質感的聲音服務</p>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <!-- introSection -->
+    <!-- 設定introSection 上下padding為5倍 -->
+    <!-- pt-5 pb-5 => py-5 -->
+    <!-- pl-3 pr-3 => px-3 -->
+    <section id="introSection" class="py-5">
+        <!-- 設定以下h1 margin-bottom為5倍 -->
+        <h1 class="section-title text-center text-secondary mb-5">提供的服務</h1>
+        <div class="container">
+            <!-- 修正排版為三項排一排 並置中文字-->
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <!-- icon使用primary配色，並且設定3倍上下padding -->
+                    <div class="icon py-3 text-primary">
+                        <i class="fas fa-paper-plane fa-5x" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-secondary">快速</h3>
+                    <p>最快速的時間完成聲音錄製.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon py-3 text-primary">
+                        <i class="fas fa-hand-holding-usd fa-5x"></i>
+                    </div>
+                    <h3 class="text-secondary">公道</h3>
+                    <p>業界透明的收費標準.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon py-3 text-primary">
+                        <i class="fas fa-microphone-alt fa-5x"></i>
+                    </div>
+                    <h3 class="text-secondary">品質保證</h3>
+                    <p>專業多元的聲音類型.</p>
+                </div>
+            </div>
+            <!-- 設定此區塊距離上方5倍margin -->
+            <!-- 修正排版在電腦螢幕(md)時六個排一排 平板(sm)三個排一排 手機兩個排一排 -->
+            <div class="row mt-5">
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-tv fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">電視廣告</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class=" fab fa-youtube fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="
+                        mt-3 text-secondary">網路廣告</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-broadcast-tower fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">廣播廣告</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fab fa-playstation fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">遊戲角色</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-microphone fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">簡介旁白</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-graduation-cap fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">聲音課程</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- introSection end -->
+    <!-- featuresSection -->
+    <section id="featuresSection" class="py-5 bg-secondary text-white">
+        <div class="container">
+            <h1 class="section-title mb-5 text-center">音檔試聽</h1>
+            <!-- 設定此區內文字 寬度為8格網格 但是必須置中 -->
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="nav nav-pills">
+                        <a data-toggle="tab" href="#article3" class="nav-link active">沈穩氣勢</a>
+                        <a data-toggle="tab" href="#article4" class="nav-link">活潑開心</a>
+                        <a data-toggle="tab" href="#article5" class="nav-link">沈穩</a>
+                    </div>
+
+                    <!-- 為article3 article4 設置tab互動方式 -->
+                    <!-- 所有要被切換的頁面或容器要被放在 .tab-content>.tab-pane -->
+                    <div class="tab-content">
+                        <article id="article3" class="my-3 tab-pane active">
+                            <div class="audio">
+                                <div class="offset-top-0">
+                                    <section>
+                                        <div itemscope itemtype="http://schema.org/AudioObject">
+                                            <meta itemprop="url" href="https://jiuanimation.com/zh/a-voice-talent-japanese-nanako">
+                                            <meta itemprop="name" content="配音員Nanako" />
+                                            <meta itemprop="description" content="配音員聲音樣本:遊戲角色-遊戲角色風格配音" />
+                                            <p>電視廣告-SUZUKI Swish 125-完勝篇</p>
+                                            <audio controls width="100%" controlsList="nodownload">
+                                                <source src="./voices/hard/傑克-SUZUKI Swish 125-完勝篇.mp3" type="audio/mp3"><br>
+                                                <p>你的瀏覽器不支援聲音播放，請更新瀏覽器</p>
+                                            </audio>
+                                        </div>
+                                        <br>
+                                    </section>
+                                </div>
+
+                                <div class="offset-top-0">
+                                    <section>
+                                        <div itemscope itemtype="http://schema.org/AudioObject">
+                                            <meta itemprop="url" href="https://jiuanimation.com/zh/a-voice-talent-japanese-nanako">
+                                            <meta itemprop="name" content="配音員Nanako" />
+                                            <meta itemprop="description" content="配音員聲音樣本:電視廣告-電視CF 產品放送" />
+                                            <p>電視廣告-紅髮艾德Ed Sheeran-2017台北演唱會</p>
+                                            <audio controls width="100%" controlsList="nodownload">
+                                                <source src="./voices/hard/傑克-紅髮艾德Ed Sheeran-2017台北演唱會.mp3" type="audio/mp3"><br>
+                                                <p>你的瀏覽器不支援聲音播放，請更新瀏覽器</p>
+                                            </audio>
+                                        </div>
+                                        <br>
+                                    </section>
+                                </div>
+                                <div class="offset-top-0">
+                                    <section>
+                                        <div itemscope itemtype="http://schema.org/AudioObject">
+                                            <meta itemprop="url" href="https://jiuanimation.com/zh/a-voice-talent-japanese-nanako">
+                                            <meta itemprop="name" content="配音員Nanako" />
+                                            <meta itemprop="description" content="配音員聲音樣本:電視廣告-電視CF 產品放送" />
+                                            <p>電視廣告-遠傳電信-果粉唯一選擇篇</p>
+                                            <audio controls width="100%" controlsList="nodownload">
+                                                <source src="./voices/hard/傑克-遠傳電信-果粉唯一選擇篇.mp3" type="audio/mp3"><br>
+                                                <p>你的瀏覽器不支援聲音播放，請更新瀏覽器</p>
+                                            </audio>
+                                        </div>
+                                        <br>
+                                    </section>
+                                </div>
+                                </li>
+                                </ul>
+                        </article>
+                        <article id="article4" class="my-3 tab-pane">
+                            <div class="audio">
+                                <div class="offset-top-0">
+                                    <section>
+                                        <div itemscope itemtype="http://schema.org/AudioObject">
+                                            <p>電視廣告-亞太電信-品牌手機$0起</p>
+                                            <audio controls width="100%" controlsList="nodownload">
+                                                <source src="./voices/medium/傑克-亞太電信-品牌手機$0起.mp3" type="audio/mp3"><br>
+                                                <p>你的瀏覽器不支援聲音播放，請更新瀏覽器</p>
+                                            </audio>
+                                        </div>
+                                        <br>
+                                    </section>
+                                </div>
+
+                                <div class="offset-top-0">
+                                    <section>
+                                        <div itemscope itemtype="http://schema.org/AudioObject">
+                                            <meta itemprop="url" href="https://jiuanimation.com/zh/a-voice-talent-japanese-nanako">
+                                            <meta itemprop="name" content="配音員Nanako" />
+                                            <meta itemprop="description" content="配音員聲音樣本:電視廣告-電視CF 產品放送" />
+                                            <p>網路廣告-全國電子Digital City-爬山篇</p>
+                                            <audio controls width="100%" controlsList="nodownload">
+                                                <source src="./voices/medium/傑克-全國電子Digital City-爬山篇.mp3" type="audio/mp3"><br>
+                                                <p>你的瀏覽器不支援聲音播放，請更新瀏覽器</p>
+                                            </audio>
+                                        </div>
+                                        <br>
+                                    </section>
+                                </div>
+                                <div class="offset-top-0">
+                                    <section>
+                                        <div itemscope itemtype="http://schema.org/AudioObject">
+                                            <meta itemprop="url" href="https://jiuanimation.com/zh/a-voice-talent-japanese-nanako">
+                                            <meta itemprop="name" content="配音員Nanako" />
+                                            <meta itemprop="description" content="配音員聲音樣本:電視廣告-電視CF 產品放送" />
+                                            <p>電視廣告-維他露P-小小兵電影篇</p>
+                                            <audio controls width="100%" controlsList="nodownload">
+                                                <source src="./voices/medium/傑克-維他露P-小小兵電影篇.mp3" type="audio/mp3"><br>
+                                                <p>你的瀏覽器不支援聲音播放，請更新瀏覽器</p>
+                                            </audio>
+                                        </div>
+                                        <br>
+                                    </section>
+                                </div>
+                                </li>
+                                </ul>
+                        </article>
+                        <article id="article5" class="my-3 tab-pane">
+                            <div class="audio">
+                                <div class="offset-top-0">
+                                    <section>
+                                        <div itemscope itemtype="http://schema.org/AudioObject">
+                                            <p>廣播廣告-大陸眼鏡-文青小物篇</p>
+                                            <audio controls width="100%" controlsList="nodownload">
+                                                <source src="./voices/soft/傑克-大陸眼鏡-文青小物篇.mp3" type="audio/mp3"><br>
+                                                <p>你的瀏覽器不支援聲音播放，請更新瀏覽器</p>
+                                            </audio>
+                                        </div>
+                                        <br>
+                                    </section>
+                                </div>
+                                <div class="offset-top-0">
+                                    <section>
+                                        <div itemscope itemtype="http://schema.org/AudioObject">
+                                            <meta itemprop="url" href="https://jiuanimation.com/zh/a-voice-talent-japanese-nanako">
+                                            <meta itemprop="name" content="配音員Nanako" />
+                                            <meta itemprop="description" content="配音員聲音樣本:電視廣告-電視CF 產品放送" />
+                                            <p>廣播廣告-張韶涵純粹世界巡迴演唱會-純粹篇</p>
+                                            <audio controls width="100%" controlsList="nodownload">
+                                                <source src="./voices/soft/傑克-張韶涵純粹世界巡迴演唱會-純粹篇.mp3" type="audio/mp3"><br>
+                                                <p>你的瀏覽器不支援聲音播放，請更新瀏覽器</p>
+                                            </audio>
+                                        </div>
+                                        <br>
+                                    </section>
+                                </div>
+                        </article>
+                    </div>
+
+
+                    <!-- 崁入一個youtube影片 https://www.youtube.com/watch?v=gwDoRPcPxtc -->
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/Sf6h0VVETGw" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="nav nav-pills">
+                                    <a href="https://drive.google.com/open?id=1l9lQRI2ayi-l2O9C-ifcB2wCR3xbkMq4" class="nav-link active">雲端連結
+                                    </a>
+                                    <hr>
+                                    <a href="https://www.youtube.com/playlist?list=PLl-vPG_VkmMgmVade16R-MD8ty7-vKq7d"
+                                        class="nav-link active">youtube
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    </section>
+    <!-- featuresSection end -->
+    <!-- reviewsSection -->
+    <section id="reviewsSection" class="py-5">
+        <div>
+            <div class="carousel-item py-5 active">
+                <!-- 第一頁 內容 -->
+                <div class="row justify-content-center">
+                    <div class="col-sm-8">
+                        <!--  設定使用者照片變圓型 -->
+                        <img width="100%" src="img/payment.png" alt="">
+                    </div>
+                </div>
+                <!-- 第一頁 內容 結束 -->
+            </div>
+        </div>
+    </section>
+    <!-- reviewsSection end -->
+    <!-- startNowSection -->
+    <section id="startNowSection" class="bg-secondary py-5">
+        <div class="row justify-content-center my-5">
+            <div class="col-md-3">
+                <h4 class="text-center text-white mb-4">Contact Us</h4>
+                <!-- 設定點擊按鈕後顯示彈出式視窗 -->
+                <button data-toggle="modal" data-target="#formModal" class="btn btn-lg btn-block btn-primary">Please
+                    click here</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 加入彈出式視窗 Modal(不能被放在col內) -->
+    <!-- 於彈出式視窗內插入Bootstrap input表單 -->
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <!-- b4-modal-default -->
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modelTitleId">Contact Us</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="">Email</label>
+                    <input class="form-control" type="email">
+                    <label for="">Comment</label>
+                    <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                    Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- startNowSection end -->
+
+    <!-- footer -->
+    <!-- footer -->
+    <!-- 設定底色為secondary文字為白色 -->
+    <footer id="footer" class="pt-5 text-blue">
+        <!-- TODO: 設定以下四塊FooterList在電腦螢幕開啟時排成一個橫排 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-list">
+                    <h4>Contact Us</h4>
+                    <a href="b99901190@gmail.com">b99901190@gmail.com</a>
+                </div>
+                <div class="col-md-3 footer-list">
+                    <h5 class="text-uppercase">Company</h5>
+                    <ul>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Press</a>
+                        </li>
+                        <li>
+                            <a href="#">Bonus</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-list">
+                    <h5 class="text-uppercase">Product</h5>
+                    <ul>
+                        <li>
+                            <a href="#">Enterprice</a>
+                        </li>
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#">Security</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-list">
+                    <h5 class="text-uppercase">Resource</h5>
+                    <ul>
+                        <li>
+                            <a href="#">Guilde</a>
+                        </li>
+                        <li>
+                            <a href="#">Help Center</a>
+                        </li>
+                        <li>
+                            <a href="#">API</a>
+                        </li>
+                        <li>
+                            <a href="#">Events</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-end bg-dark mt-5 py-2">
+            <p class="text-center">&copy; Copy right 2017</p>
+        </div>
+    </footer>
+    <!-- 設定置底返回按鈕 返回按鈕滾動動畫 -->
+    <button id="goBackBtn" href="#header" class="bg-primary">
+        Back
+    </button>
+</body>
+
+</html>

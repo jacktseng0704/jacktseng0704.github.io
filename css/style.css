@@ -1,0 +1,102 @@
+/*=============================================
+=                  General                    =
+=============================================*/
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* .btn-primary {
+    background-color: red;
+    border-color: red;
+} */
+/*=============================================
+=                  Navbar                     =
+=============================================*/
+.navbar {
+    box-shadow: 0 3px 18px rgba(0, 0, 0, .11);
+}
+
+/*=============================================
+=                  Header                     =
+=============================================*/
+#header {
+    padding: 350px 0;
+    background-image: url('../img/mic.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    border-radius: 0;
+    color: white;
+    position: relative;
+    /* filter: brightness(0.8); */
+}
+
+/* 遮罩 半透明的 */
+#header:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#header .container {
+    position: relative;
+    z-index: 3;
+}
+
+/*=============================================
+=                  Intro                      =
+=============================================*/
+/*=============================================
+=                  Features                   =
+=============================================*/
+/*=============================================
+=                  Reviews                    =
+=============================================*/
+/*=============================================
+=                  Start Now                  =
+=============================================*/
+/*=============================================
+=                   Footer                    =
+=============================================*/
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-end p {
+    font-size: 8px;
+    margin: 0;
+}
+
+#goBackBtn {
+    color: white;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1000;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    /* 隱藏按鈕 */
+    display: none;
+}

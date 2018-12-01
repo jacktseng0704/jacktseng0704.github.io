@@ -1,0 +1,37 @@
+// scss註解
+// 規則：所有在css的語法在scss都能通用
+// 變數 
+$primary-color: red;
+// 暫位選擇器(裝備)
+%animation {
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+}
+
+// 混合器
+// 建立一個設定方框大小的混合器
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+.box1 {
+    // 用 @include來使用一個混合器
+    @include size(1000px, 500px);
+    background: $primary-color; // 用 @extend來使用一個暫位選擇器
+    @extend %animation;
+}
+
+.box2 {
+    @include size(500px, 500px);
+    background: $primary-color;
+    @extend %animation;
+}
+
+.box1:hover,
+.box2:hover {
+    // darken 變深
+    // lighten 變淺
+    background: darken($primary-color, 10%);
+}
